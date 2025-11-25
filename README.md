@@ -10,13 +10,11 @@ Players may also play preset levels.
 - Built entirely in **Java**
 - Interactive **GUI** using **Swing and AWT**
 - Custom level creation by selecting corner colours and grid size  
-- Automatic gradient generation for the puzzle 
+- Automatic gradient generation for the puzzle
+- Set of pre defined levels to play
 - Simple, intuitive interface
 
 ## 🚧 Planned Features
-- Gradually increasing puzzle difficulty
-- More visually appealing interface
-- Different difficulty options when creating a level
 - Scoring system
 
 ## 🛠 Technologies Used
