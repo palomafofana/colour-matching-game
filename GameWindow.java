@@ -99,7 +99,8 @@ public class GameWindow extends JFrame {
 
                 boolean isLocked = (row == 0 && col == 0) ||
                                     (row == 0 && col == size - 1) ||
-                                    (row == size - 1 && col == size - 1);
+                                    (row == size - 1 && col == size - 1) ||
+                                    (row == size - 1 && col == 0);
 
                 
                 Tile tile = new Tile(colourChoser(row, col), isLocked);   
@@ -167,7 +168,7 @@ public class GameWindow extends JFrame {
                 
                 // Check if you've won
                 if (CheckIfComplete()) {
-                    JOptionPane.showMessageDialog(null, "YOU WIN!!!!", "Malaika butt", JOptionPane.PLAIN_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "YOU WIN!!!!", "Winna Winna", JOptionPane.PLAIN_MESSAGE);
                     //selectedButton.setBackground(new Color(109, 255, 82));
                     //selectedButton.setText("YOU WIN!!!");
                 }

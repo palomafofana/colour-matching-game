@@ -52,7 +52,7 @@ public class HomeScreen extends JFrame {
 
         playLevelsBtn.addActionListener(e -> {
             dispose();
-            showLevelSelection();
+            new LevelSelection();
         });
 
         createLevelBtn.addMouseListener(new MouseAdapter() {
@@ -80,38 +80,6 @@ public class HomeScreen extends JFrame {
         setVisible(true);
     }
     
-    private void showLevelSelection() {
-        // Still need to define levels
-        JFrame levelFrame = new JFrame("Level Selection");
-
-        levelFrame.setSize(300, 400);
-        levelFrame.setLocationRelativeTo(null);
-        levelFrame.getContentPane().setBackground(new Color(220, 225, 255));
-        levelFrame.setLayout(new BorderLayout(10, 10));
-
-        // Title
-        JLabel title = new JLabel("Choose a Level", SwingConstants.CENTER);
-        title.setFont(title.getFont().deriveFont(Font.BOLD, 16f));
-        levelFrame.add(title, BorderLayout.NORTH);
-
-        // List of levels
-        String[] levels = {"Level 1", "Level 2", "Level 3", "Level 4", "Level 5", "Level 6"};
-        JPanel buttonPanel = new JPanel(new GridLayout(levels.length, 1, 5, 5));
-        buttonPanel.setBackground(new Color(220, 225, 255));
-
-        for (String lvl : levels) {
-            JButton btn = new JButton(lvl);
-            btn.setBackground(Color.WHITE);
-            btn.addActionListener(e -> {
-                int levelNum = Integer.parseInt(lvl.split(" ")[1]);
-                //startPredefinedLevel(levelNum); impliment that
-                levelFrame.dispose(); // close the window
-            });
-            buttonPanel.add(btn);
-        }
-
-        levelFrame.add(buttonPanel);
-        levelFrame.setVisible(true);
-    }
+    
 }
 
